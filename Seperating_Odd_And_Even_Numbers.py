@@ -54,6 +54,10 @@ def GUI_1():
     while True:
         for i in range(len(colors)):
             for j in range(0, 360, 10):
+                # Draw a rectangle with the current color and angle
+                graph.DrawRectangle((0,0), (800,600), line_color='black', fill_color=colors[i])
+                # Draw the output text on the graph widget
+                graph.DrawText(output_text, (50, 240), color='black', font=('Helvetica', 16))
 
 #Creates a Method to Display the contents of the "even.txt" file using GUI
 #Opens and reads the "even.txt" file
