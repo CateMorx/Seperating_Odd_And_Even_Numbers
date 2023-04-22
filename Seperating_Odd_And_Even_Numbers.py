@@ -40,7 +40,14 @@ def GUI_1():
     colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
     
     # Create the PySimpleGUI window
- # Loop indefinitely to create the animated gradient effect
+    layout = [
+        [psg.Column([
+            [psg.Graph((800, 600), (0, 0), (800, 600), background_color='black', key='graph')],
+        ], scrollable=True)]
+    ]
+    window = psg.Window("Initial Number Input", layout, finalize=True)
+
+     # Loop indefinitely to create the animated gradient effect
 
 #Creates a Method to Display the contents of the "even.txt" file using GUI
 #Opens and reads the "even.txt" file
