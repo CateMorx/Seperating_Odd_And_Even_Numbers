@@ -70,16 +70,20 @@ def GUI_1():
 
 
 #Creates a Method to Display the contents of the "even.txt" file using GUI
-#Opens and reads the "even.txt" file
-#Instantiates the color for the animated gradient effect of the GUI
-# Get a reference to the Graph widget
-# Create the PySimpleGUI window
- # Loop indefinitely to create the animated gradient effect
- # Draw a rectangle with the current color and angle
- # Draw the output text on the graph widget
- # Add a short delay to slow down the animation
- # Update the PySimpleGUI window to show the new rectangle and text
- #If window is closed, the loop ends
+def GUI_2():
+    #Opens and reads the "even.txt" file
+    with open("even.txt", "r") as read_file:
+        output_text = read_file.read()
+
+    #Instantiates the color for the animated gradient effect of the GUI
+    # Get a reference to the Graph widget
+    # Create the PySimpleGUI window
+    # Loop indefinitely to create the animated gradient effect
+    # Draw a rectangle with the current color and angle
+    # Draw the output text on the graph widget
+    # Add a short delay to slow down the animation
+    # Update the PySimpleGUI window to show the new rectangle and text
+    #If window is closed, the loop ends
 
 #Creates a Method to Display the contents of the "odd.txt" file using GUI
 #Opens and reads the "odd.txt" file
