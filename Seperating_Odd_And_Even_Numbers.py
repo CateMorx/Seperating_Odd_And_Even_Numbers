@@ -103,7 +103,7 @@ def GUI_2():
                 time.sleep(0.01)
                 # Update the PySimpleGUI window to show the new rectangle and text
                 window.Refresh()
-                
+
         event = window.read()
         #If window is closed, the loop ends
         if event == psg.WINDOW_CLOSED:
@@ -111,16 +111,27 @@ def GUI_2():
             break
 
 #Creates a Method to Display the contents of the "odd.txt" file using GUI
-#Opens and reads the "odd.txt" file
-#Instantiates the color for the animated gradient effect of the GUI
-# Get a reference to the Graph widget
-# Create the PySimpleGUI window
- # Loop indefinitely to create the animated gradient effect
-  # Draw a rectangle with the current color and angle
- # Draw the output text on the graph widget
- # Add a short delay to slow down the animation
- # Update the PySimpleGUI window to show the new rectangle and text
- #If window is closed, the loop ends
+def GUI_3():
+    #Opens and reads the "odd.txt" file
+    with open("odd.txt", "r") as read_file:
+        output_text = read_file.read()
+    #Instantiates the color for the animated gradient effect of the GUI
+    colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+    # Create the PySimpleGUI window
+    layout = [
+        [psg.Column([
+            [psg.Graph((800, 600), (0, 0), (800, 600), background_color='black', key='graph')],
+        ], scrollable=True)]
+    ]
+    window = psg.Window("Initial Number Input", layout, finalize=True)
+    # Get a reference to the Graph widget
+    graph = window['graph']
+    # Loop indefinitely to create the animated gradient effect
+        # Draw a rectangle with the current color and angle
+        # Draw the output text on the graph widget
+        # Add a short delay to slow down the animation
+        # Update the PySimpleGUI window to show the new rectangle and text
+    #If window is closed, the loop ends
 
 #Calls the proccess method
 #Calls the First GUI method
