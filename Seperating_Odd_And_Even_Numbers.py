@@ -35,7 +35,11 @@ def GUI_1():
     #Opens and reads the "numbers.txt" file
     with open("numbers.txt", "r") as read_file:
         output_text = read_file.read()
-# Create the PySimpleGUI window
+
+    #Instantiates the color for the animated gradient effect of the GUI
+    colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+    
+    # Create the PySimpleGUI window
  # Loop indefinitely to create the animated gradient effect
 
 #Creates a Method to Display the contents of the "even.txt" file using GUI
