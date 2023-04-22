@@ -85,10 +85,14 @@ def GUI_2():
         ], scrollable=True)]
     ]
     window = psg.Window("Initial Number Input", layout, finalize=True)
-    
+
     # Get a reference to the Graph widget
     graph = window['graph']
+
     # Loop indefinitely to create the animated gradient effect
+    while True:
+        for i in range(len(colors)):
+            for j in range(0, 360, 10):
     # Draw a rectangle with the current color and angle
     # Draw the output text on the graph widget
     # Add a short delay to slow down the animation
