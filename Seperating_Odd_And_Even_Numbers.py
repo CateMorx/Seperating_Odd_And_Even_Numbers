@@ -47,6 +47,9 @@ def GUI_1():
     ]
     window = psg.Window("Initial Number Input", layout, finalize=True)
 
+    # Get a reference to the Graph widget
+    graph = window['graph']
+    
      # Loop indefinitely to create the animated gradient effect
 
 #Creates a Method to Display the contents of the "even.txt" file using GUI
