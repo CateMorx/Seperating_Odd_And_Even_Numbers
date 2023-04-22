@@ -98,10 +98,17 @@ def GUI_2():
                 
                 # Draw the output text on the graph widget
                 graph.DrawText(output_text, (50, 240), color='black', font=('Helvetica', 16))
-                
+
                 # Add a short delay to slow down the animation
+                time.sleep(0.01)
                 # Update the PySimpleGUI window to show the new rectangle and text
-                #If window is closed, the loop ends
+                window.Refresh()
+                
+        event = window.read()
+        #If window is closed, the loop ends
+        if event == psg.WINDOW_CLOSED:
+            window.close()
+            break
 
 #Creates a Method to Display the contents of the "odd.txt" file using GUI
 #Opens and reads the "odd.txt" file
