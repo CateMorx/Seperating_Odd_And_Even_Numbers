@@ -78,10 +78,16 @@ def GUI_2():
     #Instantiates the color for the animated gradient effect of the GUI
     colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
 
+    # Create the PySimpleGUI window
+    layout = [
+        [psg.Column([
+            [psg.Graph((800, 600), (0, 0), (800, 600), background_color='black', key='graph')],
+        ], scrollable=True)]
+    ]
+    window = psg.Window("Initial Number Input", layout, finalize=True)
+    
     # Get a reference to the Graph widget
     graph = window['graph']
-    
-    # Create the PySimpleGUI window
     # Loop indefinitely to create the animated gradient effect
     # Draw a rectangle with the current color and angle
     # Draw the output text on the graph widget
