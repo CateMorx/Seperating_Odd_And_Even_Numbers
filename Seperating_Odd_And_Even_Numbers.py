@@ -76,7 +76,11 @@ def GUI_2():
         output_text = read_file.read()
 
     #Instantiates the color for the animated gradient effect of the GUI
+    colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+
     # Get a reference to the Graph widget
+    graph = window['graph']
+    
     # Create the PySimpleGUI window
     # Loop indefinitely to create the animated gradient effect
     # Draw a rectangle with the current color and angle
