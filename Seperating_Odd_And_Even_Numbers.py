@@ -11,7 +11,9 @@ import PySimpleGUI as psg
 import time
 
 #Creates Method For Separating Odd and Even Numbers From A text file containing 20 integers
-#Opens and creates the 3 files, "numbers.txt","even.txt","odd.txt"
+def process():
+    #Opens and creates the 3 files, "numbers.txt","even.txt","odd.txt"
+    with open ("numbers.txt") as initial_file, open ("even.txt", "a") as even_numbers, open ("odd.txt", "a") as odd_numbers:
 #Reads each line in the "numbers.txt"
 #Determines if Even number and appends the value unto the "even.txt" file
 #Determines if Odd number and appends the value unto the "odd.txt" file
