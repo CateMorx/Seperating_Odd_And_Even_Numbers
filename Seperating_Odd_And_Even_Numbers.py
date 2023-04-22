@@ -5,7 +5,11 @@
 # The second text file will be named odd.txt that will contains all odd numbers extracted from the numbers.txt.
 
 
+
 #Imports necessary elements
+import PySimpleGUI as psg
+import time
+
 #Creates Method For Separating Odd and Even Numbers From A text file containing 20 integers
 #Opens and creates the 3 files, "numbers.txt","even.txt","odd.txt"
 #Reads each line in the "numbers.txt"
