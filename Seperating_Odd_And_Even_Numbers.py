@@ -93,11 +93,15 @@ def GUI_2():
     while True:
         for i in range(len(colors)):
             for j in range(0, 360, 10):
-    # Draw a rectangle with the current color and angle
-    # Draw the output text on the graph widget
-    # Add a short delay to slow down the animation
-    # Update the PySimpleGUI window to show the new rectangle and text
-    #If window is closed, the loop ends
+                # Draw a rectangle with the current color and angle
+                graph.DrawRectangle((0,0), (800,600), line_color='black', fill_color=colors[i])
+                
+                # Draw the output text on the graph widget
+                graph.DrawText(output_text, (50, 240), color='black', font=('Helvetica', 16))
+                
+                # Add a short delay to slow down the animation
+                # Update the PySimpleGUI window to show the new rectangle and text
+                #If window is closed, the loop ends
 
 #Creates a Method to Display the contents of the "odd.txt" file using GUI
 #Opens and reads the "odd.txt" file
