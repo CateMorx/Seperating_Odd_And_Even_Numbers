@@ -30,7 +30,11 @@ def process():
                     odd_numbers.write(odd_lines + "\n")
 
 #Creates a Method to Display the contents of the "numbers.txt" file using GUI
-#Opens and reads the "numbers.txt" file
+def GUI_1():
+       
+    #Opens and reads the "numbers.txt" file
+    with open("numbers.txt", "r") as read_file:
+        output_text = read_file.read()
 # Create the PySimpleGUI window
  # Loop indefinitely to create the animated gradient effect
 
