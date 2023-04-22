@@ -14,7 +14,10 @@ import time
 def process():
     #Opens and creates the 3 files, "numbers.txt","even.txt","odd.txt"
     with open ("numbers.txt") as initial_file, open ("even.txt", "a") as even_numbers, open ("odd.txt", "a") as odd_numbers:
-#Reads each line in the "numbers.txt"
+
+    #Reads each line in the "numbers.txt"
+    for line in initial_file:
+        number_line = int(line)
 #Determines if Even number and appends the value unto the "even.txt" file
 #Determines if Odd number and appends the value unto the "odd.txt" file
 
