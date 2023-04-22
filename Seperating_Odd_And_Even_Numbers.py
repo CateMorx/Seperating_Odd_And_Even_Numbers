@@ -127,11 +127,25 @@ def GUI_3():
     # Get a reference to the Graph widget
     graph = window['graph']
     # Loop indefinitely to create the animated gradient effect
-        # Draw a rectangle with the current color and angle
-        # Draw the output text on the graph widget
-        # Add a short delay to slow down the animation
-        # Update the PySimpleGUI window to show the new rectangle and text
-    #If window is closed, the loop ends
+    while True:
+        for i in range(len(colors)):
+            for j in range(0, 360, 10):
+                # Draw a rectangle with the current color and angle
+                graph.DrawRectangle((0,0), (800,600), line_color='black', fill_color=colors[i])
+                
+                # Draw the output text on the graph widget
+                graph.DrawText(output_text, (50, 240), color='black', font=('Helvetica', 16))
+
+                # Add a short delay to slow down the animation
+                time.sleep(0.01)
+                # Update the PySimpleGUI window to show the new rectangle and text
+                window.Refresh()
+
+        event = window.read()
+        #If window is closed, the loop ends
+        if event == psg.WINDOW_CLOSED:
+            window.close()
+            break
 
 #Calls the proccess method
 #Calls the First GUI method
