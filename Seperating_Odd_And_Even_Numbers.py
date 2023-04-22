@@ -148,6 +148,10 @@ def GUI_3():
             break
 
 #Calls the proccess method
+process()
 #Calls the First GUI method
+GUI_1()
 #Calls the Second GUI method
+GUI_2()
 #Calls the Third GUI method
+GUI_3()
