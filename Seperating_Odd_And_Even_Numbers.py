@@ -49,16 +49,23 @@ def GUI_1():
 
     # Get a reference to the Graph widget
     graph = window['graph']
-    
+
      # Loop indefinitely to create the animated gradient effect
+    while True:
+        for i in range(len(colors)):
+            for j in range(0, 360, 10):
 
 #Creates a Method to Display the contents of the "even.txt" file using GUI
 #Opens and reads the "even.txt" file
+#Instantiates the color for the animated gradient effect of the GUI
+# Get a reference to the Graph widget
 # Create the PySimpleGUI window
  # Loop indefinitely to create the animated gradient effect
 
 #Creates a Method to Display the contents of the "odd.txt" file using GUI
 #Opens and reads the "odd.txt" file
+#Instantiates the color for the animated gradient effect of the GUI
+# Get a reference to the Graph widget
 # Create the PySimpleGUI window
  # Loop indefinitely to create the animated gradient effect
 
