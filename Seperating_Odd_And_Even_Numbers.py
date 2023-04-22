@@ -19,15 +19,15 @@ def process():
         for line in initial_file:
             number_line = int(line)
 
-        #Determines if Even number and appends the value unto the "even.txt" file
-        if number_line % 2 == 0:
-                    even_lines=str(number_line)
-                    even_numbers.write(even_lines + "\n")
+            #Determines if Even number and appends the value unto the "even.txt" file
+            if number_line % 2 == 0:
+                        even_lines=str(number_line)
+                        even_numbers.write(even_lines + "\n")
 
-        #Determines if Odd number and appends the value unto the "odd.txt" file
-        else:
-                    odd_lines=str(number_line)
-                    odd_numbers.write(odd_lines + "\n")
+            #Determines if Odd number and appends the value unto the "odd.txt" file
+            else:
+                        odd_lines=str(number_line)
+                        odd_numbers.write(odd_lines + "\n")
 
 #Creates a Method to Display the contents of the "numbers.txt" file using GUI
 def GUI_1():
@@ -62,7 +62,7 @@ def GUI_1():
                 time.sleep(0.01)
                 # Update the PySimpleGUI window to show the new rectangle and text
                 window.Refresh()
-        event = window.read()
+        event, values = window.read()
         #If window is closed, the loop ends
         if event == psg.WINDOW_CLOSED:
             window.close()
@@ -104,7 +104,7 @@ def GUI_2():
                 # Update the PySimpleGUI window to show the new rectangle and text
                 window.Refresh()
 
-        event = window.read()
+        event, values= window.read()
         #If window is closed, the loop ends
         if event == psg.WINDOW_CLOSED:
             window.close()
@@ -141,7 +141,7 @@ def GUI_3():
                 # Update the PySimpleGUI window to show the new rectangle and text
                 window.Refresh()
 
-        event = window.read()
+        event, values= window.read()
         #If window is closed, the loop ends
         if event == psg.WINDOW_CLOSED:
             window.close()
