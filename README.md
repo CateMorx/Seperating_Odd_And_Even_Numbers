@@ -10,8 +10,11 @@ PySimpleGUI is a Python package that enables Python programmers of all levels to
 PySimpleGUI was launched in 2018,and has four ports:
 
 Tkinter
+
 PyQt
+
 wxPython
+
 Remi
 
 PySimpleGUI wraps portions of each of these other packages and makes them easier to use. However, each of the ports has to be installed separately.
